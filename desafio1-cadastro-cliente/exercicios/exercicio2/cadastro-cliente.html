@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/menu.js"></script>
+    <script src="js/cadastro-cliente.js"></script>
+</head>
+
+<body>
+
+    <nav id="menu">
+
+        <img onclick="fecharMenu()" src="img/voltar.svg" class="menu-button-voltar">
+
+        <h2>Menu</h2>
+
+        <ul>
+            <li>Usuário</li>
+            <li>Cliente</li>
+            <li>Professor</li>
+            <li>Curso</li>
+            <li>Sair</li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <img onclick="abrirMenu()" class="menu-button" src="img/menu.svg" alt="Ícone do menu">
+
+        <h1>Cadastro de Cliente</h1>
+
+        <form>
+            <input id="nome" name="nome" type="text" placeholder="Nome">
+            <input id="email" name="email" type="email" placeholder="Email">
+
+            <div class="div-radio-button">
+                <label for="inputMasc">Masculino: </label>
+                <input name="sexo" value="m" id="inputMasc" type="radio">
+            </div>
+
+            <div class="div-radio-button">
+                <label for="inputFem">Feminino:</label>
+                <input name="sexo" value="f" id="inputFem" type="radio">
+            </div>
+
+            <fieldset>
+                <legend>Cursos de Interesse</legend>
+
+                <input name="cursos[]" value="web" id="web" type="checkbox">
+                <label for="web">Curso de Desenvolvimento Web</label>
+                <br>
+
+                <input name="cursos[]" value="mobile" id="mobile" type="checkbox">
+                <label for="mobile">Curso de Desenvolvimento Mobile</label>
+                <br>
+
+                <input name="cursos[]" value="desktop" id="desktop" type="checkbox">
+                <label for="desktop">Curso de Desenvolvimento Desktop</label>
+                <br>
+
+            </fieldset>
+
+            <label>Estado:</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione seu estado</option>
+                <option value="mt">Mato Grosso</option>
+                <option value="ms">Mato Grosso do Sul</option>
+                <option value="sp">São Paulo</option>
+            </select>
+
+            <label for="inputFile">Foto</label>
+            <input name="foto" id="inputFile" type="file">
+
+            <label for="inputDataNasc">Data Nascimento</label>
+            <input id="inputDataNasc" name="data-nasc" type="datetime-local">
+
+            <button onclick="salvar()" type="button">Salvar</button>
+
+        </form>
+
+    </main>
+
+
+
+
+
+
+</body>
+
+</html>

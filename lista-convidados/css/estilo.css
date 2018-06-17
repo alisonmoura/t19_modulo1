@@ -1,0 +1,99 @@
+body{
+    background-color: rgb(221, 221, 221);
+    font-family: sans-serif;
+}
+
+.card{
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.3);
+    background-color: white;
+    width: 40%;
+    margin: 20px auto;
+    padding: 20px;
+    color: gray;
+    text-align: center;
+}
+
+.card h1{
+    font-weight: 300;
+    text-align: center;
+}
+
+.card input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+.card button{
+    background-color: transparent;
+    border: 1px solid gray;
+    color: gray;
+    padding: 15px 20px;
+    border-radius: 30px;
+    margin: 10px 0px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.card button:hover{
+    background-color: gray;
+    color: white;
+    box-shadow: 0px 1px 5px rgba(0,0,0,.3); 
+}
+
+.card.lista{
+    text-align: left;
+}
+
+.lista-convidados div{
+    margin: 25px 0px;
+}
+
+.lista-convidados div img{
+    width: 20px;
+    float: right;
+}
+
+.card .checkbox{
+    width: 100%;
+    text-align: left;
+}
+
+.card .checkbox input[type=checkbox]{
+    width: auto;
+}
+
+.card select{
+    display: none;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: white;
+    border-radius: 3px;
+    color: gray;
+}
+.tabela-convidados{
+    border-collapse: collapse;
+    width: 100%;
+}
+.tabela-convidados th{
+    padding: 13px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 15pt;
+    font-weight: 300;
+}
+.tabela-convidados td{
+    padding: 15px;
+}
+.tabela-convidados tr{
+    border-bottom: 1px solid gray;
+}
+.tabela-convidados tr img{
+    width: 20px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro de Pedidos</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <script src="js/controller/gerenciador-pedido.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <ul class="direita">
+            <a href="">
+                <li>Clientes</li>
+            </a>
+            <a href="">
+                <li>Produtos</li>
+            </a>
+            <a href="">
+                <li>Pedidos</li>
+            </a>
+            <a href="">
+                <li>Sair</li>
+            </a>
+        </ul>
+    </nav>
+
+    <h1>Registrar pedidos</h1>
+
+    <form>
+
+        <div class="campo">
+            <input id="quantidade" type="number" placeholder="Quantidade de camisetas">
+        </div>
+
+        <div class="campo">
+            <input id="estampa" type="text" placeholder="Estampa da camiseta">
+        </div>
+
+        <div class="campo">
+            <select id="tamanho">
+                <option value="" selected>Selecione um tamanho</option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+        </div>
+
+        <div class="centralizado texto-centralizado">
+            <button type="button" onclick="gerenciadorPedido.salvar()">Salvar</button>
+            <button class="vermelho" type="button" onclick="gerenciadorPedido.cancelar()">Cancelar</button>
+        </div>
+
+    </form>
+
+    <h1>Pedidos registrados</h1>
+
+    <table>
+        <thead>
+            <th>Quantidade</th>
+            <th>Estampa</th>
+            <th>Tamanho</th>
+            <th>Ações</th>
+        </thead>
+        <tbody id="tabela">
+        </tbody>
+    </table>
+
+</body>
+
+</html>

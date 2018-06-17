@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Revisão Objetos</title>
+    <script src="js/models/jogador.js"></script>
+    <script src="js/controller/jogador-controller.js"></script>
+</head>
+<body>
+
+    
+
+    <form>
+        <input id="nome" type="text" placeholder="Nome do jogador"><br><br>
+        <input id="idade" type="number" placeholder="Idade do jogador"><br><br>
+        <select id="posicao">
+            <option value="atacante">Atacante</option>
+            <option value="meio-campo">Meio-campo</option>
+            <option value="zageiro">Zageiro</option>
+            <option value="goleiro">Goleiro</option>
+            <option value="lateral">Lateral</option>
+            <option value="volante">Volante</option>
+        </select><br><br>
+        <input id="time" type="text" placeholder="Time do jogador"><br><br>
+        <input id="salario" type="number" placeholder="Salário do jogador"><br><br>
+        <input id="nacionalidade" type="text" placeholder="Nacionalidade do jogador"><br><br>
+        
+        <button onclick="jogadorController.salvar()">Criar jogador</button>
+    </form>
+    
+</body>
+</html>

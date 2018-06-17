@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Convidados</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/lista-convidados.js"></script>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Adicionar Convidado</h1>
+        <input id="nome" type="text" placeholder="Nome do convidado">
+        <input id="idade" type="number" placeholder="Idade do convidado">
+        <input id="email" type="email" placeholder="Email do convidado">
+        
+        <div class="checkbox" onclick="gerenciador.exibirSelectAcompanhante()">
+            <label for="acompanhante">Vai levar acompanhante:</label>
+            <input id="acompanhante" type="checkbox">
+        </div>
+
+        <select name="qtdAcompanhante" id="qtdAcompanhante">
+            <option value="">Selecione a quantidade de acompanhantes</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        
+        <button id="btnSalvar" onclick="gerenciador.salvar()">Adicionar</button>
+    </div>
+
+    <div class="card lista">
+        <h1>Lista de Convidados</h1>
+        <div class="lista-convidados" id="lista"></div>
+        <table class="tabela-convidados" id="tabelaConvidados">
+            <thead>
+                <th>Nome</th>
+                <th>Emai</th>
+                <th>Idade</th>
+                <th>Qtd. Ac.</th>
+                <th>Ações</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table> 
+    </div>
+    
+</body>
+</html>

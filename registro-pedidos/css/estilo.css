@@ -1,0 +1,96 @@
+/* BODY */
+body{
+    font-family: sans-serif;
+}
+
+/* UTILITÁRIOS */
+.direita{
+    float: right;
+}
+.centralizado{
+    margin: auto;
+}
+.texto-centralizado{
+    text-align: center;
+}
+
+/* NAV */
+nav{
+    background-color: blue;
+    width: 100%;
+    height: 70px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.4);
+}
+nav ul{
+    list-style: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav li{
+    display: inline-block;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/* H1 */
+h1{
+    text-align: center;
+    font-weight: 300;
+    margin: 20px 0px;
+}
+
+/* FORMULÁRIO */
+form{
+    margin: auto;
+    width: 70%;
+}
+form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+form select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* BOTÃO */
+button{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 20px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,.4);
+}
+button.vermelho{
+    background-color: red;
+}
+
+/* TABELA */
+table{
+    width: 70%;
+    margin: auto;
+    border-collapse: collapse;
+}
+table thead{
+    background-color: blue;
+    color: white;
+}
+table th{
+    padding: 20px;
+    font-weight: 300;
+}
+table td{
+    padding: 15px 20px;
+    border-bottom: 1px solid gray;
+ }
