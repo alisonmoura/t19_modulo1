@@ -18,6 +18,7 @@ class JogadorController{
     salvar(){
         // Instanciando um jogador
         let novoJogador = new Jogador();
+        // Le o jogador no formulário
         this.lerJogador(novoJogador);
         novoJogador.criar();
         

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Musify - Cadastro de Música</title>
+    <script src="js/model/musica.js"></script>
+    <script src="js/controller/musica-controller.js"></script>
+</head>
+<body>
+    
+    <h1>Cadastro de Música</h1>
+
+    <form>
+        <input id="nome" type="text" placeholder="Nome da música">
+        <input id="genero" type="text" placeholder="Genero da música">
+        <input id="artista" type="text" placeholder="Artista da música">
+        <input id="duracao" type="time" placeholder="Duração da música">
+        <input id="album" type="text" placeholder="Álbum da música">
+        <input id="compositor" type="text" placeholder="Compositor da música">
+
+        <button type="button" onclick="musicaController.salvar()">Salvar</button>
+    </form>
+
+</body>
+</html>
