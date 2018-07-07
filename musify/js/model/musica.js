@@ -36,7 +36,12 @@ class Musica{
     // Método buscar
     buscar(){
         // Pega o item musicas e converte para objeto e o retorna
-        return JSON.parse(localStorage.getItem("musicas"));
+
+        if(JSON.parse(localStorage.getItem("musicas")) == null){
+            return [];
+        }else{
+            return JSON.parse(localStorage.getItem("musicas"));
+        }
     }
 
 }
