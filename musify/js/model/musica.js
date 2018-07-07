@@ -9,8 +9,6 @@ class Musica{
         this.duracao;
         this.album;
         this.compositor;
-        
-        
     }
 
     // Criar os métodos de persistência
