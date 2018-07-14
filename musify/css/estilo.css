@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: 'Quicksand', sans-serif;
 }
 body{
     background-color: rgb(37, 33, 33);
@@ -87,4 +88,27 @@ body{
     color: white;
     border: none;
     margin-bottom: 20px;
+}
+.card-musica{
+    width: 90%;
+    padding: 10px;
+    background-image: linear-gradient(-45deg, #fa2c2c, #ff5a18);
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    color: white;
+}
+.card-musica .titulo{
+    font-size: 14pt;
+    font-weight: 300;
+    display: inline-block;
+    width: 100%;
+}
+.card-musica .artista{
+    font-size: 10pt;
+    display: inline-block;
+}
+.card-musica .duracao{
+    font-size: 12pt;
+    float: right;
 }

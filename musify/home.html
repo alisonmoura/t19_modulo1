@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Musify - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="css/estilo.css">
+    <script src="js/model/musica.js"></script>
+    <script src="js/controller/home-controller.js"></script>
+    <script>
+        let homeController = new HomeController();
+    </script>
 </head>
 
-<body>
+<body onload="homeController.carregarMusicas()">
 
     <header class="header">
         <nav>
@@ -25,6 +31,9 @@
         <a href="cadastro-musica.html">
             <button class="btn">Nova Música</button>
         </a>
+    </div>
+
+    <div id="lista-musicas">
     </div>
 
 </body>
