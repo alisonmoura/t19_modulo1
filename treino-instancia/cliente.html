@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de Cliente</title>
+    <script src="model/cliente.js"></script>
+    <script src="controller/cliente-controller.js"></script>
+    <script>
+        let clienteController = new ClienteController();
+    </script>
+</head>
+<body>
+
+    <h1>Cadastro de Cliente</h1>
+    <form>
+        <input id="nome" type="text" placeholder="Seu Nome">
+        <input id="cpf" type="text" placeholder="Seu CPF">
+        <input id="endereco" type="text" placeholder="Seu Endereço">
+        <input id="telefone" type="text" placeholder="Seu telefone">
+        <button onclick="clienteController.salvar()" type="button">Salvar</button>
+    </form>
+
+</body>
+</html>
