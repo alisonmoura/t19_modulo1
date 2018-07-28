@@ -6,13 +6,12 @@ class MusicaController{
         this.musicas = [];
     }
 
-    // Método salvar
-    salvar(){
-
-        // instanciar a música
-        var musica = new Musica();
-        
-        // ler a música
+    /**
+     * Método para leitura da música
+     * 
+     * @param {Object} musica : objeto música para leitura
+     */
+    lerMusica(musica){
         // lendo genero
         musica.genero = document.getElementById("genero").value;
         // lendo nome
@@ -25,9 +24,41 @@ class MusicaController{
         musica.album = document.getElementById("album").value;
         // lendo compositor
         musica.compositor = document.getElementById("compositor").value;
+    }
+
+    /**
+     * Método que limpa o formulário de cadastro de música
+     */
+    limpar(){
+        document.getElementById("genero").value = "";
+        document.getElementById("nome").value = "";
+        document.getElementById("artista").value = "";
+        document.getElementById("duracao").value  = "";
+        document.getElementById("album").value = "";
+        document.getElementById("compositor").value = "";
+    }
+
+    /**
+     * Método que instancia uma Música, preenche com o formulário e cadastra no LocalStorage
+     */
+    salvar(){
+
+        // instanciar a música
+        var musica = new Musica();
+        
+        // leitura da música
+        this.lerMusica(musica);
 
         // salvar a música
         musica.cadastrar();
+
+        // limpar formulário
+        this.limpar();
+
+        alert("Salvo com sucesso!");
+
+        // carrega a página home.html
+        location.href = "home.html";
 
     }
 

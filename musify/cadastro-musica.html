@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Musify - Cadastro de Música</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilo.css">
     <script src="js/model/musica.js"></script>
     <script src="js/controller/musica-controller.js"></script>
 </head>
-<body>
-    
-    <h1>Cadastro de Música</h1>
 
-    <form>
+<body>
+    <header class="header">
+        <nav>
+            <img src="img/menu.svg">
+            <h1>Cadastro Música</h1>
+        </nav>
+    </header>
+
+    <form class="form-login">
         <input id="nome" type="text" placeholder="Nome da música">
         <input id="genero" type="text" placeholder="Genero da música">
         <input id="artista" type="text" placeholder="Artista da música">
@@ -24,4 +32,5 @@
     </form>
 
 </body>
+
 </html>
