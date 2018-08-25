@@ -7,19 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Lojnha Vuejs</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+    <link href="node_modules/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script src="node_modules/vuetify/dist/vuetify.min.js"></script>
+    <script src="js/model/Usuario.js"></script>
 </head>
 
 <body>
 
     <v-app id="app">
         <v-toolbar color="light-blue">
-            <v-toolbar-side-icon></v-toolbar-side-icon>
-            <v-toolbar-title>{{titulo}}</v-toolbar-title>
+            <v-toolbar-side-icon class="white--text"></v-toolbar-side-icon>
+            <v-toolbar-title class="white--text">{{titulo}}</v-toolbar-title>
             <v-spacer></v-spacer>
-            <v-toolbar-items class="hidden-sm-and-down">
+            <v-toolbar-items v-if="usuarioLogado" class="hidden-sm-and-down">
+                <v-menu :nudge-width="100">
+                    <v-toolbar-item class="white--text" slot="activator">
+                        {{usuarioLogado.nome}}
+                        <v-icon dark>arrow_drop_down</v-icon>
+                    </v-toolbar-item>
+                    <v-list>
+                        <v-list-tile>
+                            <v-list-tile-title @click="logout">Sair</v-list-tile-title>
+                        </v-list-tile>
+                    </v-list>
+                </v-menu>
             </v-toolbar-items>
         </v-toolbar>
         <v-content>
@@ -28,9 +40,8 @@
 
                 <div v-if="!usuarioLogado">
                     <h2>Olá, cadastre-se para fazer compras:</h2>
-                    <v-btn color="warning" @click="disabilitado = !disabilitado">{{ disabilitado ? "Abilitar" : "Desabilitar" }}</v-btn>
                     <v-form>
-                        <v-text-field :disabled="disabilitado" type="text" label="Nome" v-model="usuario.nome"></v-text-field>
+                        <v-text-field type="text" label="Nome" v-model="usuario.nome"></v-text-field>
                         <v-text-field type="email" label="Email" v-model="usuario.email"></v-text-field>
                         <v-text-field type="password" label="Senha" v-model="usuario.senha"></v-text-field>
                         <v-btn type="button" @click="salvar">Salvar</v-btn>
@@ -39,6 +50,7 @@
 
                 <div v-else>
                     <h2>Olá {{usuarioLogado.nome}}, seja bem-vindo à loja Vue!</h2>
+                    <p v-for="p in produtos">{{p.nome}}</p>
                 </div>
             </v-container>
         </v-content>

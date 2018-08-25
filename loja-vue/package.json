@@ -1,0 +1,15 @@
+{
+  "name": "loja-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alison Moura <alison.oghino@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vuetify": "^1.1.14"
+  }
+}
