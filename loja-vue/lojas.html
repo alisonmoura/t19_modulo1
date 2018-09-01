@@ -36,7 +36,7 @@
         </v-toolbar>
         <v-content>
             <v-container>
-                <h1>{{titulo}}</h1>
+                <h1>Lojas</h1>
 
                 <div v-if="!usuarioLogado">
                     <h2>Olá, cadastre-se para fazer compras:</h2>
@@ -54,22 +54,13 @@
                             <h2>Olá {{usuarioLogado.nome}}, seja bem-vindo à loja Vue!</h2>
                         </v-flex>
                         <v-layout row wrap justify-space-between>
-                            <v-flex mt-4 mb-2 xs12 sm4 md3 mr-2 v-for="p in produtos">
+                            <v-flex mt-4 mb-2 xs12 v-for="loja in lojas">
                                 <v-card color="cyan darken-2" class="white--text">
                                   <v-layout wrap>
-                                    <v-flex xs5>
-                                      <img
-                                        :src="p.imagem"
-                                        height="125px"
-                                        contain
-                                      ></img>
-                                    </v-flex>
                                     <v-flex xs12>
                                       <v-card-title primary-title>
                                         <div>
-                                          <div class="headline">{{p.nome}}</div>
-                                          <div>{{p.marca}}</div>
-                                          <div>R$ {{p.preco}}</div>
+                                          <div class="headline">{{loja.nome}}</div>
                                         </div>
                                       </v-card-title>
                                     </v-flex>
@@ -79,14 +70,13 @@
                         </v-layout>
                     </v-flex>
                     <v-flex xs12 md2>
-                        <propaganda>
+                        <img width="100%" src="https://cdn1.campograndenews.com.br/uploads/tmp/images/5245213/640x480-3b29ba6b649be2a1cf825fc100c7c873.jpg" alt="">
                     </v-flex>
                 </v-layout>
             </v-container>
         </v-content>
     </v-app>
 
-    <script src="js/components/Propaganda.js"></script>
     <script src="js/app.js"></script>
 
 </body>

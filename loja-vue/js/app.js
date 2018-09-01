@@ -1,4 +1,8 @@
 new Vue({
+    // components
+    components: {
+        'propaganda': Propaganda
+    },
     // dados
     data: {
         titulo: "Loja Vue! em Vue",
@@ -32,6 +36,17 @@ new Vue({
                 preco: 10,
                 descricao: "Bla bla bla",
                 marca: "Collon"
+            }
+        ],
+        lojas: [
+            {
+                nome: "Casas Bahia"
+            },
+            {
+                nome: "Magalu"
+            },
+            {
+                nome: "Americanas"
             }
         ]
     },
